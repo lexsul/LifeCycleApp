@@ -16,6 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  CGRect windowsFrame = [[UIScreen mainScreen] bounds];
+  UIWindow *theWindow = [[UIWindow alloc] initWithFrame:windowsFrame];
+  viewController = [[ViewController alloc] init];
+  [theWindow setUserInteractionEnabled:true];
+  [theWindow setRootViewController:viewController];
+  [self setWindow:theWindow];
   // Override point for customization after application launch.
   return YES;
 }

@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+  UILabel *startLabel;
+  UILabel *StopLabel;
+  UILabel *foregroundActive;
+  UILabel *background;
+  UILabel *suspended;
+}
 
 
 @end
