@@ -28,15 +28,17 @@
   
   NSManagedObjectContext *context = [[self persistentContainer] viewContext];
   NSFetchRequest *request = [[NSFetchRequest alloc] init];
-  NSEntityDescription *entity = [NSEntityDescription entityForName:@"AppStatus"
+  NSEntityDescription *entity = [NSEntityDescription entityForName:@"Launch"
                                             inManagedObjectContext:context];
   [request setEntity:entity];
   NSArray *result = [context executeFetchRequest:request error:nil];
-  
-  
+  NSLog(@"launch %lu", (unsigned long)[result count]);
+  NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"Launch"
+                                                          inManagedObjectContext:context];
+  [object setValue:@"App Start!" forKey:@"launch"];
+  [self saveContext];
   
 
-  
   return YES;
 }
 

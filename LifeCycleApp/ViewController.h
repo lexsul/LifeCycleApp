@@ -7,15 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @interface ViewController : UIViewController
 {
-  UILabel *startLabel;
+  UILabel *launchLabel;
   UILabel *StopLabel;
   UILabel *foregroundActive;
   UILabel *background;
   UILabel *suspended;
 }
+@property UILabel *launchLabel;
 //@property (nonatomic, strong) NSFetchedResultsController *featchResultController;
 //@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

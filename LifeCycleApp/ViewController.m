@@ -13,16 +13,16 @@
 @end
 
 @implementation ViewController
-
+@synthesize launchLabel;
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
-  
+
   [[self view] setBackgroundColor:[UIColor whiteColor]];
-  CGRect startLabelFrame = CGRectMake(20, 40, 200, 31);
-  startLabel = [[UILabel alloc] initWithFrame:startLabelFrame];
-  [startLabel setText:@"start"];
-  [[self view] addSubview:startLabel];
+  CGRect launchLabelFrame = CGRectMake(20, 40, 200, 31);
+  launchLabel = [[UILabel alloc] initWithFrame: launchLabelFrame];
+  //[launchLabel setText:@"start"];
+  [[self view] addSubview:launchLabel];
+  
   
   // Do any additional setup after loading the view.
 }
