@@ -33,12 +33,23 @@
   [request setEntity:entity];
   NSArray *result = [context executeFetchRequest:request error:nil];
   NSLog(@"launch %lu", (unsigned long)[result count]);
+  
+  NSEntityDescription *terminatedEntity = [NSEntityDescription entityForName:@"Terminate"
+                                                      inManagedObjectContext:context];
+  [request setEntity:terminatedEntity];
+  result = [context executeFetchRequest:request error:nil];
+  NSLog(@"terminated %lu", (unsigned long)[result count]);
+  
+  
+  
+  
   NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"Launch"
                                                           inManagedObjectContext:context];
   [object setValue:@"App Start!" forKey:@"launch"];
   [self saveContext];
   
-
+  [[viewController launchLabel] setText:@"tettee"];
+  
   return YES;
 }
 
@@ -52,6 +63,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
   // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
   // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+  
+  
 }
 
 
@@ -66,6 +79,10 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+  NSManagedObjectContext *context = [[self persistentContainer] viewContext];
+  NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"Terminate"
+                                                          inManagedObjectContext:context];
+  [object setValue:@"App Terminate!" forKey:@"terminate"];
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   // Saves changes in the application's managed object context before the application terminates.
   [self saveContext];

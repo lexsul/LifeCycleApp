@@ -20,7 +20,7 @@
   [[self view] setBackgroundColor:[UIColor whiteColor]];
   CGRect launchLabelFrame = CGRectMake(20, 40, 200, 31);
   launchLabel = [[UILabel alloc] initWithFrame: launchLabelFrame];
-  //[launchLabel setText:@"start"];
+  [launchLabel setText:@"start"];
   [[self view] addSubview:launchLabel];
   
   
