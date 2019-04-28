@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  //Config window
   CGRect windowsFrame = [[UIScreen mainScreen] bounds];
   UIWindow *theWindow = [[UIWindow alloc] initWithFrame:windowsFrame];
   viewController = [[ViewController alloc] init];
@@ -23,6 +25,18 @@
   [theWindow setRootViewController:viewController];
   [self setWindow:theWindow];
   // Override point for customization after application launch.
+  
+  NSManagedObjectContext *context = [[self persistentContainer] viewContext];
+  NSFetchRequest *request = [[NSFetchRequest alloc] init];
+  NSEntityDescription *entity = [NSEntityDescription entityForName:@"AppStatus"
+                                            inManagedObjectContext:context];
+  [request setEntity:entity];
+  NSArray *result = [context executeFetchRequest:request error:nil];
+  
+  
+  
+
+  
   return YES;
 }
 

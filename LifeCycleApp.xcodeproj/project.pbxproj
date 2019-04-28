@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5052DE22730945003280BA /* ModelApp.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5052DD22730945003280BA /* ModelApp.m */; };
 		FAA932342272C0C40071F7DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA932332272C0C40071F7DE /* AppDelegate.m */; };
 		FAA932372272C0C40071F7DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA932362272C0C40071F7DE /* ViewController.m */; };
 		FAA9323A2272C0C40071F7DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA932382272C0C40071F7DE /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA5052DC22730945003280BA /* ModelApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelApp.h; sourceTree = "<group>"; };
+		FA5052DD22730945003280BA /* ModelApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelApp.m; sourceTree = "<group>"; };
 		FAA9322F2272C0C40071F7DE /* LifeCycleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeCycleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA932322272C0C40071F7DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAA932332272C0C40071F7DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +47,8 @@
 		FAA932262272C0C30071F7DE = {
 			isa = PBXGroup;
 			children = (
+				FA5052DC22730945003280BA /* ModelApp.h */,
+				FA5052DD22730945003280BA /* ModelApp.m */,
 				FAA932312272C0C40071F7DE /* LifeCycleApp */,
 				FAA932302272C0C40071F7DE /* Products */,
 			);
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA9323D2272C0C40071F7DE /* LifeCycleApp.xcdatamodeld in Sources */,
+				FA5052DE22730945003280BA /* ModelApp.m in Sources */,
 				FAA932372272C0C40071F7DE /* ViewController.m in Sources */,
 				FAA932452272C0C70071F7DE /* main.m in Sources */,
 				FAA932342272C0C40071F7DE /* AppDelegate.m in Sources */,

@@ -16,7 +16,8 @@
   UILabel *background;
   UILabel *suspended;
 }
-
+//@property (nonatomic, strong) NSFetchedResultsController *featchResultController;
+//@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
 
