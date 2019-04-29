@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="AppStatus" representedClassName="AppStatus" syncable="YES" codeGenerationType="class"/>
+    <entity name="BecomeActive" representedClassName="BecomeActive" syncable="YES" codeGenerationType="class">
+        <attribute name="becomeActive" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="EnterBackground" representedClassName="EnterBackground" syncable="YES" codeGenerationType="class">
+        <attribute name="enterBackground" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="EnterForeground" representedClassName="EnterForeground" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES" syncable="YES"/>
+        <attribute name="attribute1" optional="YES" syncable="YES"/>
+        <attribute name="enterForeground" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Launch" representedClassName="Launch" syncable="YES" codeGenerationType="class">
         <attribute name="launch" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -11,9 +21,11 @@
         <attribute name="terminate" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AppStatus" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="EnterBackground" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="Launch" positionX="-54" positionY="0" width="128" height="60"/>
         <element name="Terminate" positionX="-36" positionY="18" width="128" height="60"/>
         <element name="ResignActive" positionX="-18" positionY="36" width="128" height="60"/>
+        <element name="EnterForeground" positionX="0" positionY="54" width="128" height="90"/>
+        <element name="BecomeActive" positionX="18" positionY="72" width="128" height="60"/>
     </elements>
 </model>
