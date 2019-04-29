@@ -40,7 +40,11 @@
   result = [context executeFetchRequest:request error:nil];
   NSLog(@"terminated %lu", (unsigned long)[result count]);
   
-  
+  NSEntityDescription *resignActiveEntity = [NSEntityDescription entityForName:@"ResignActive"
+                                                      inManagedObjectContext:context];
+  [request setEntity:resignActiveEntity];
+  result = [context executeFetchRequest:request error:nil];
+  NSLog(@"resignActive %lu", (unsigned long)[result count]);
   
   
   NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"Launch"
@@ -57,6 +61,11 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
   // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+  NSManagedObjectContext *context = [[self persistentContainer] viewContext];
+  NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"ResignActive"
+                                                          inManagedObjectContext:context];
+  [object setValue:@"App ResignActive!" forKey:@"resignActive"];
+  [self saveContext];
 }
 
 
@@ -134,4 +143,13 @@
     }
 }
 
+- (void)insertContext:(NSString *)entityName :(NSString *)keyName {
+  NSManagedObjectContext *context = [[self persistentContainer] viewContext];
+  NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:entityName
+                                                          inManagedObjectContext:context];
+  NSString *objectValue = [NSString stringWithFormat:@"App is %@", keyName];
+  
+  [object setValue:objectValue forKey:keyName];
+  [self saveContext];
+}
 @end

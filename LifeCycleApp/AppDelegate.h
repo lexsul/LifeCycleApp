@@ -21,7 +21,7 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 - (void)saveContext;
-
+- (void)insertContext:(NSString *)entityName :(NSString *)keyName;
 
 @end
 
