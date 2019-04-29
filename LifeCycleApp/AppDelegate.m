@@ -78,15 +78,12 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-  
+  [self insertContext:@"BecomeActive" :@"BecomeActive"];
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-  NSManagedObjectContext *context = [[self persistentContainer] viewContext];
-  NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"Terminate"
-                                                          inManagedObjectContext:context];
-  [object setValue:@"App Terminate!" forKey:@"terminate"];
+[self insertContext:@"Terminate" :@"terminate"];
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   // Saves changes in the application's managed object context before the application terminates.
   [self saveContext];

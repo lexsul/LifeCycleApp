@@ -7,8 +7,6 @@
         <attribute name="enterBackground" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="EnterForeground" representedClassName="EnterForeground" syncable="YES" codeGenerationType="class">
-        <attribute name="attribute" optional="YES" syncable="YES"/>
-        <attribute name="attribute1" optional="YES" syncable="YES"/>
         <attribute name="enterForeground" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Launch" representedClassName="Launch" syncable="YES" codeGenerationType="class">
@@ -25,7 +23,7 @@
         <element name="Launch" positionX="-54" positionY="0" width="128" height="60"/>
         <element name="Terminate" positionX="-36" positionY="18" width="128" height="60"/>
         <element name="ResignActive" positionX="-18" positionY="36" width="128" height="60"/>
-        <element name="EnterForeground" positionX="0" positionY="54" width="128" height="90"/>
+        <element name="EnterForeground" positionX="0" positionY="54" width="128" height="60"/>
         <element name="BecomeActive" positionX="18" positionY="72" width="128" height="60"/>
     </elements>
 </model>
